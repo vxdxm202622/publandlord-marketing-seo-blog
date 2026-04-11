@@ -18,6 +18,8 @@ const navigation = [
       { name: "Pub Websites", href: "/category/pub-websites" },
     ]
   },
+  { name: "Services", href: "/services" },
+  { name: "Locations", href: "/locations" },
   { name: "About", href: "/about" },
 ]
 

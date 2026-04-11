@@ -1,4 +1,5 @@
 import { blogPosts, categories } from "@/lib/blog-data"
+import { regions } from "@/lib/locations-data"
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -30,6 +31,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
   ]
 
   // Category pages
@@ -48,5 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...categoryPages, ...blogPostPages]
+  // Region pages
+  const regionPages: MetadataRoute.Sitemap = regions.map((region) => ({
+    url: `${baseUrl}/locations/${region.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }))
+
+  return [...staticPages, ...categoryPages, ...blogPostPages, ...regionPages]
 }

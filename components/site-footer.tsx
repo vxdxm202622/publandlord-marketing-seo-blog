@@ -4,6 +4,8 @@ const footerNavigation = {
   main: [
     { name: "Home", href: "/" },
     { name: "Blog", href: "/blog" },
+    { name: "Services", href: "/services" },
+    { name: "Locations", href: "/locations" },
     { name: "About", href: "/about" },
     { name: "Get Help", href: "/get-help" },
   ],
@@ -13,13 +15,19 @@ const footerNavigation = {
     { name: "Social Media", href: "/category/social-media" },
     { name: "Pub Websites", href: "/category/pub-websites" },
   ],
+  external: [
+    { name: "PubLandlord.com", href: "https://publandlord.com" },
+    { name: "Free Audit", href: "https://publandlord.com/free-audit" },
+    { name: "Case Studies", href: "https://publandlord.com/case-studies" },
+    { name: "Contact", href: "https://publandlord.com/contact" },
+  ],
 }
 
 export function SiteFooter() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div>
             <Link href="/" className="font-serif text-xl font-bold">
@@ -74,6 +82,27 @@ export function SiteFooter() {
                   >
                     {item.name}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* External Links */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider">
+              PubLandlord.com
+            </h3>
+            <ul className="mt-4 space-y-3">
+              {footerNavigation.external.map((item) => (
+                <li key={item.name}>
+                  <a 
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                  >
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
