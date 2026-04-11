@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: 'Pub Landlord Blog | Marketing Tips for Independent UK Pubs',
   description: 'Practical marketing advice for independent UK pub landlords. Get more bookings, more footfall, and better local visibility for your pub.',
   generator: 'v0.app',
+  verification: {
+    google: 'SNFajxjPfE3QudSwWjiX0hujdeFwsoAJMdClZ8-Aqmo',
+  },
   icons: {
     icon: [
       {
