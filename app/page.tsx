@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BlogCard } from "@/components/blog-card"
@@ -5,6 +6,17 @@ import { CategoryCard } from "@/components/category-card"
 import { CTABanner } from "@/components/cta-banner"
 import { getFeaturedPosts, getRecentPosts, categories } from "@/lib/blog-data"
 import { AlertTriangle, Clock, Users, Search } from "lucide-react"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    title: 'Pub Landlord Blog | Marketing Tips for Independent UK Pubs',
+    description: 'Practical marketing advice for independent UK pub landlords. Get more bookings, more footfall, and better local visibility for your pub.',
+  },
+}
 
 const struggles = [
   {

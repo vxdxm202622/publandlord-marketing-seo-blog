@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   description: 'Practical marketing advice for independent UK pub landlords. Get more bookings, more footfall, and better local visibility for your pub.',
   generator: 'v0.app',
-  metadataBase: new URL('https://publandlord.com/blog'),
+  metadataBase: new URL('https://publandlord-marketing-seo-blog.vercel.app'),
   alternates: {
     canonical: '/',
   },
