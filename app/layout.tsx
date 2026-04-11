@@ -16,9 +16,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Pub Landlord Blog | Marketing Tips for Independent UK Pubs',
+  title: {
+    default: 'Pub Landlord Blog | Marketing Tips for Independent UK Pubs',
+    template: '%s | Pub Landlord Blog',
+  },
   description: 'Practical marketing advice for independent UK pub landlords. Get more bookings, more footfall, and better local visibility for your pub.',
   generator: 'v0.app',
+  metadataBase: new URL('https://publandlord.com/blog'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Pub Landlord Blog',
+    title: 'Pub Landlord Blog | Marketing Tips for Independent UK Pubs',
+    description: 'Practical marketing advice for independent UK pub landlords. Get more bookings, more footfall, and better local visibility for your pub.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pub Landlord Blog',
+    description: 'Practical marketing advice for independent UK pub landlords.',
+  },
   verification: {
     google: 'SNFajxjPfE3QudSwWjiX0hujdeFwsoAJMdClZ8-Aqmo',
   },

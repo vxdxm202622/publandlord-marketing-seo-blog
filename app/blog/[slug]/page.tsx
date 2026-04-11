@@ -24,13 +24,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!post) {
     return {
-      title: "Article Not Found | Pub Landlord Blog",
+      title: "Article Not Found",
     }
   }
 
   return {
-    title: `${post.title} | Pub Landlord Blog`,
+    title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: ['PubLandlord'],
+      section: post.category,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+    },
   }
 }
 

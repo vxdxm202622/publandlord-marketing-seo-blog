@@ -5,8 +5,11 @@ import { CTABanner } from "@/components/cta-banner"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "About | Pub Landlord Blog",
+  title: "About",
   description: "Learn about the Pub Landlord Blog and our mission to help independent UK pub landlords with practical marketing advice.",
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 export default function AboutPage() {
@@ -83,12 +86,17 @@ export default function AboutPage() {
                 >
                   PubLandlord.com
                 </a>
-                , a service that helps independent pubs with websites, SEO, social media, and marketing.
+                , a UK-based service that helps independent pubs with websites, SEO, social media, and marketing.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                We&apos;ve worked with dozens of independent pubs across England, Scotland, and Wales — from 
+                village locals to city centre gastro pubs. We understand the unique challenges of the UK pub 
+                trade: the licensing requirements, the seasonal patterns, the competition from chains, and 
+                the importance of being part of your local community.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                We&apos;ve worked with dozens of independent pubs across the UK, and we know what actually 
-                works (and what doesn&apos;t). This blog shares what we&apos;ve learned so that even pubs who 
-                can&apos;t afford professional help can improve their marketing.
+                This blog shares what we&apos;ve learned so that even pubs who can&apos;t afford professional 
+                help can improve their marketing. Everything here is based on real results from real pubs.
               </p>
 
               <h2 className="font-serif text-2xl font-bold mb-4">Our Approach</h2>

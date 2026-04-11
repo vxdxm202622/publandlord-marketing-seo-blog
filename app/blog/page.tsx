@@ -7,8 +7,11 @@ import { blogPosts, getFeaturedPosts, categories } from "@/lib/blog-data"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Blog | Pub Landlord Blog",
+  title: "All Articles",
   description: "Practical marketing articles for independent UK pub landlords. Tips on local SEO, social media, pub websites, and getting more customers through the door.",
+  alternates: {
+    canonical: '/blog',
+  },
 }
 
 export default function BlogPage() {

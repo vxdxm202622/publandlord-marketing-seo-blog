@@ -6,8 +6,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Globe, Search, Share2, Megaphone, CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Get Help | Pub Landlord Blog",
+  title: "Get Help",
   description: "Get professional marketing help for your independent pub. Websites, SEO, social media, and more from PubLandlord.com.",
+  alternates: {
+    canonical: '/get-help',
+  },
 }
 
 const services = [

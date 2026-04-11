@@ -42,27 +42,34 @@ export default function HomePage() {
         <section className="bg-secondary text-secondary-foreground">
           <div className="mx-auto max-w-7xl px-4 py-16 lg:py-24 lg:px-8">
             <div className="max-w-3xl">
+              <p className="text-sm font-medium text-accent uppercase tracking-wide mb-3">
+                For Independent UK Pub Landlords
+              </p>
               <h1 className="font-serif text-4xl lg:text-5xl font-bold leading-tight text-balance">
-                Practical marketing tips for independent pub landlords
+                More bookings. More footfall. Better local visibility.
               </h1>
               <p className="mt-6 text-lg text-secondary-foreground/80 leading-relaxed max-w-2xl">
-                Get more bookings, more footfall, and better local visibility. 
-                No jargon, no fluff — just advice that works for busy pub operators.
+                Free, practical marketing advice written specifically for independent pub landlords. 
+                No jargon, no theory — just proven tactics you can use this week.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a 
-                  href="/blog" 
-                  className="inline-flex items-center justify-center rounded-md bg-accent text-accent-foreground px-6 py-3 font-medium hover:bg-accent/90 transition-colors"
-                >
-                  Browse All Articles
-                </a>
+              <p className="mt-4 text-secondary-foreground/60 text-sm">
+                Need hands-on help?{" "}
                 <a 
                   href="https://publandlord.com" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md border border-secondary-foreground/30 px-6 py-3 font-medium hover:bg-secondary-foreground/10 transition-colors"
+                  className="text-accent hover:underline font-medium"
                 >
-                  Get Marketing Help
+                  PubLandlord.com
+                </a>
+                {" "}offers done-for-you marketing support.
+              </p>
+              <div className="mt-8">
+                <a 
+                  href="#latest-advice" 
+                  className="inline-flex items-center justify-center rounded-md bg-accent text-accent-foreground px-8 py-4 text-lg font-medium hover:bg-accent/90 transition-colors"
+                >
+                  Read the Latest Advice
                 </a>
               </div>
             </div>
@@ -70,7 +77,7 @@ export default function HomePage() {
         </section>
 
         {/* Featured Posts */}
-        <section className="py-16 lg:py-20">
+        <section id="latest-advice" className="py-16 lg:py-20 scroll-mt-8">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="flex items-center justify-between mb-8">
               <h2 className="font-serif text-2xl lg:text-3xl font-bold">Latest Advice</h2>

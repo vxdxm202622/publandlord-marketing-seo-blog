@@ -23,13 +23,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!category) {
     return {
-      title: "Category Not Found | Pub Landlord Blog",
+      title: "Category Not Found",
     }
   }
 
   return {
-    title: `${category.title} | Pub Landlord Blog`,
+    title: category.title,
     description: category.description,
+    alternates: {
+      canonical: `/category/${slug}`,
+    },
   }
 }
 
