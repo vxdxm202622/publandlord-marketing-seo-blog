@@ -151,6 +151,59 @@ export default async function CategoryPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Related Links */}
+        <section className="py-12 lg:py-16">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <h2 className="font-serif text-xl font-bold mb-6">Explore More</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Link
+                href="/services"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Professional Services
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Done-for-you marketing support
+                </p>
+              </Link>
+              <Link
+                href="/locations"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Find Help Near You
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Location-specific services
+                </p>
+              </Link>
+              <Link
+                href="/blog"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  All Articles
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Browse our full archive
+                </p>
+              </Link>
+              <Link
+                href="/get-help"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Get Help
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Ways we can support you
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-12 lg:py-16 bg-muted">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">

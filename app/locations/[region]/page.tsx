@@ -200,6 +200,51 @@ export default async function RegionPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Related Content */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <h2 className="font-serif text-xl font-bold mb-6">Helpful Resources</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Link
+                href="/blog/how-to-get-more-local-customers-into-your-pub"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <span className="text-xs font-medium text-accent">Article</span>
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mt-1 line-clamp-2">
+                  How to Get More Local Customers
+                </h3>
+              </Link>
+              <Link
+                href="/services"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <span className="text-xs font-medium text-accent">Services</span>
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mt-1">
+                  View All Services
+                </h3>
+              </Link>
+              <Link
+                href="/blog"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <span className="text-xs font-medium text-accent">Blog</span>
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mt-1">
+                  Marketing Tips &amp; Advice
+                </h3>
+              </Link>
+              <Link
+                href="/category/local-seo"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <span className="text-xs font-medium text-accent">Category</span>
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mt-1">
+                  Local SEO Guides
+                </h3>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Back Link */}
         <section className="py-8 border-t border-border">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">

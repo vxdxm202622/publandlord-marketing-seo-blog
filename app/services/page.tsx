@@ -65,6 +65,29 @@ const additionalResources = [
   { title: "Case Studies", href: "https://publandlord.com/case-studies" },
 ]
 
+const relatedArticles = [
+  { 
+    title: "How to Get More Local Customers Into Your Pub", 
+    href: "/blog/how-to-get-more-local-customers-into-your-pub",
+    category: "Pub Marketing"
+  },
+  { 
+    title: "7 Social Media Post Ideas for Pubs", 
+    href: "/blog/pub-social-media-post-ideas",
+    category: "Social Media"
+  },
+  { 
+    title: "Why Your Pub Needs a Google Business Profile", 
+    href: "/blog/why-your-pub-needs-google-business-profile",
+    category: "Local SEO"
+  },
+  { 
+    title: "Common Pub Website Mistakes to Avoid", 
+    href: "/blog/common-pub-website-mistakes",
+    category: "Pub Websites"
+  },
+]
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -162,8 +185,41 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Find Local Help */}
+        {/* Related Articles */}
         <section className="py-16 lg:py-20">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <h2 className="font-serif text-2xl lg:text-3xl font-bold mb-8">Free Advice From Our Blog</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {relatedArticles.map((article) => (
+                <Link
+                  key={article.href}
+                  href={article.href}
+                  className="group rounded-lg border border-border bg-card p-5 hover:border-primary/30 hover:shadow-md transition-all"
+                >
+                  <span className="text-xs font-medium text-accent">{article.category}</span>
+                  <h3 className="font-serif font-bold text-foreground group-hover:text-primary transition-colors mt-2 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-1 text-sm text-primary mt-3">
+                    Read article
+                    <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/blog"
+                className="text-sm font-medium text-primary hover:underline"
+              >
+                View all articles
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Find Local Help */}
+        <section className="py-16 lg:py-20 bg-muted/30">
           <div className="mx-auto max-w-7xl px-4 lg:px-8 text-center">
             <h2 className="font-serif text-2xl lg:text-3xl font-bold mb-4">Find Help Near You</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">

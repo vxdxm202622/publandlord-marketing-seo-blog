@@ -262,7 +262,7 @@ export default async function BlogPostPage({ params }: Props) {
 
               {/* Sidebar - Hidden on mobile */}
               <aside className="hidden lg:block">
-                <div className="sticky top-24">
+                <div className="sticky top-24 space-y-6">
                   <div className="p-6 bg-muted rounded-lg border border-border">
                     <h3 className="font-semibold mb-4 text-sm">Quick Navigation</h3>
                     <nav>
@@ -279,6 +279,49 @@ export default async function BlogPostPage({ params }: Props) {
                         ))}
                       </ul>
                     </nav>
+                  </div>
+                  
+                  {/* Internal Links */}
+                  <div className="p-6 bg-card rounded-lg border border-border">
+                    <h3 className="font-semibold mb-4 text-sm">Explore More</h3>
+                    <ul className="space-y-3">
+                      <li>
+                        <Link 
+                          href="/services"
+                          className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-accent" />
+                          Professional Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          href="/locations"
+                          className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-accent" />
+                          Find Help Near You
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          href={`/category/${post.categorySlug}`}
+                          className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-accent" />
+                          More {post.category} Articles
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          href="/blog"
+                          className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-accent" />
+                          All Articles
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </aside>

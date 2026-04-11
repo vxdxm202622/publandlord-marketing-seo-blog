@@ -23,21 +23,29 @@ const struggles = [
     icon: Users,
     title: "Footfall is down",
     description: "Locals don't know what's on, and passing trade has dried up. You need more ways to reach potential customers.",
+    link: "/blog/how-to-get-more-local-customers-into-your-pub",
+    linkText: "How to attract more locals",
   },
   {
     icon: Clock,
     title: "No time for marketing",
     description: "Between running the bar, managing staff, and handling suppliers, marketing always falls to the bottom of the list.",
+    link: "/services",
+    linkText: "Done-for-you services",
   },
   {
     icon: Search,
     title: "Not showing up on Google",
     description: "When people search for 'pubs near me', your competitors appear first. You're invisible to new customers.",
+    link: "/category/local-seo",
+    linkText: "Local SEO guides",
   },
   {
     icon: AlertTriangle,
     title: "Website isn't working",
     description: "Your website is outdated, hard to update, or doesn't help people book tables or find your opening hours.",
+    link: "/blog/common-pub-website-mistakes",
+    linkText: "Common website mistakes",
   },
 ]
 
@@ -154,9 +162,15 @@ export default function HomePage() {
                     <item.icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-serif font-semibold text-lg mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                     {item.description}
                   </p>
+                  <a 
+                    href={item.link}
+                    className="text-sm font-medium text-primary hover:underline"
+                  >
+                    {item.linkText} &rarr;
+                  </a>
                 </div>
               ))}
             </div>

@@ -87,6 +87,59 @@ export default function LocationsPage() {
           </div>
         </section>
 
+        {/* Related Content */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <h2 className="font-serif text-xl font-bold mb-6">Helpful Resources</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Link
+                href="/services"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Our Services
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Website design, SEO, and more
+                </p>
+              </Link>
+              <Link
+                href="/blog"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Free Advice
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Marketing tips for pubs
+                </p>
+              </Link>
+              <Link
+                href="/category/local-seo"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Local SEO Guides
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Get found on Google
+                </p>
+              </Link>
+              <Link
+                href="/about"
+                className="group rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-all"
+              >
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  About Us
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Who we are and how we help
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="bg-primary text-primary-foreground py-12">
           <div className="mx-auto max-w-7xl px-4 lg:px-8 text-center">
