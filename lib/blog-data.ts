@@ -8,6 +8,7 @@ export interface BlogPost {
   date: string
   readTime: string
   featured?: boolean
+  image?: string
 }
 
 export interface Category {
@@ -54,6 +55,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-get-more-local-customers-into-your-pub",
     title: "How to Get More Local Customers Into Your Pub Without Relying on Discounts",
     excerpt: "Discounts might bring people through the door once, but they rarely build loyalty. Here are proven strategies to attract and retain local customers who value what you offer.",
+    image: "/images/blog/local-customers.jpg",
     content: `
 Discounts are tempting. When footfall is down, it feels like the obvious solution is to slash prices or run constant promotions. But here's the problem: discount customers are often the least loyal. They'll visit once for the deal, then move on to the next pub offering a better one.
 
@@ -125,6 +127,7 @@ If you'd like hands-on help developing a marketing strategy for your pub, PubLan
     slug: "pub-social-media-post-ideas",
     title: "7 Facebook and Instagram Post Ideas for Pubs That Actually Increase Footfall",
     excerpt: "Struggling to know what to post? These proven content ideas help pubs boost engagement and turn followers into visitors.",
+    image: "/images/blog/social-media.jpg",
     content: `
 Most pub social media accounts fall into one of two traps: either posting nothing for weeks, or sharing the same "come visit us" message repeatedly. Neither approach builds an audience or drives footfall.
 
@@ -228,6 +231,7 @@ If you'd like help creating a social media strategy for your pub, PubLandlord of
     slug: "why-your-pub-website-loses-bookings",
     title: "Why Your Pub Website May Be Losing Bookings Before People Even Visit",
     excerpt: "Common website mistakes that cost pubs customers, and how to fix them without spending a fortune.",
+    image: "/images/blog/website-mistakes.jpg",
     content: `
 Your pub website might be turning away potential customers without you ever knowing. People searching for somewhere to eat, drink, or book an event often make decisions in seconds. If your website makes things difficult, they'll simply go elsewhere.
 
@@ -335,6 +339,7 @@ If you'd like help improving your pub website, PubLandlord offers website suppor
     slug: "google-business-profile-for-pubs",
     title: "How to Improve Your Pub&apos;s Google Business Profile in 30 Minutes a Week",
     excerpt: "Your Google Business Profile is often the first thing potential customers see. Here's how to make it work harder for your pub with minimal time investment.",
+    image: "/images/blog/google-business.jpg",
     content: `
 When someone searches for "pubs near me" or "Sunday lunch in [your town]," Google Business Profile results often appear before any website. This free tool can be one of your most effective marketing channels, yet most pubs set it up once and never touch it again.
 
@@ -470,6 +475,7 @@ If you'd like help optimising your pub's Google presence, PubLandlord offers loc
     slug: "seasonal-pub-marketing-ideas",
     title: "Seasonal Pub Marketing Ideas for Summer, Christmas, and Big Sporting Events",
     excerpt: "Make the most of peak trading periods with marketing ideas that bring in crowds and boost spending.",
+    image: "/images/blog/events-marketing.jpg",
     content: `
 Every pub has peak periods when footfall naturally increases. The pubs that thrive are the ones that plan ahead and market these periods effectively. Here's how to make the most of the biggest opportunities in your calendar.
 
