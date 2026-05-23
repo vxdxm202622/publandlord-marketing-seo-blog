@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BlogCard } from "@/components/blog-card"
@@ -59,8 +60,17 @@ export default function HomePage() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-secondary text-secondary-foreground">
-          <div className="mx-auto max-w-7xl px-4 py-16 lg:py-24 lg:px-8">
+        <section className="bg-secondary text-secondary-foreground relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <Image
+              src="/images/hero-pub.jpg"
+              alt=""
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="relative mx-auto max-w-7xl px-4 py-16 lg:py-24 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-medium text-accent uppercase tracking-wide mb-3">
                 For Independent UK Pub Landlords
@@ -118,6 +128,7 @@ export default function HomePage() {
                   categorySlug={post.categorySlug}
                   date={post.date}
                   slug={post.slug}
+                  image={post.image}
                   featured={true}
                 />
               ))}
@@ -191,6 +202,7 @@ export default function HomePage() {
                   categorySlug={post.categorySlug}
                   date={post.date}
                   slug={post.slug}
+                  image={post.image}
                 />
               ))}
             </div>

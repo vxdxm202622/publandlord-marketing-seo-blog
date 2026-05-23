@@ -74,6 +74,7 @@ export default function BlogPage() {
                   categorySlug={featuredPosts[0].categorySlug}
                   date={featuredPosts[0].date}
                   slug={featuredPosts[0].slug}
+                  image={featuredPosts[0].image}
                   featured={true}
                 />
                 {featuredPosts[1] && (
@@ -84,6 +85,7 @@ export default function BlogPage() {
                     categorySlug={featuredPosts[1].categorySlug}
                     date={featuredPosts[1].date}
                     slug={featuredPosts[1].slug}
+                    image={featuredPosts[1].image}
                     featured={true}
                   />
                 )}
@@ -108,6 +110,7 @@ export default function BlogPage() {
                   categorySlug={post.categorySlug}
                   date={post.date}
                   slug={post.slug}
+                  image={post.image}
                 />
               ))}
             </div>

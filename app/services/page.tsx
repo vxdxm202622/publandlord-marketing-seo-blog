@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ArrowRight, Globe, MapPin, Star, Calendar, Share2, MessageSquare } from "lucide-react"
@@ -95,8 +96,17 @@ export default function ServicesPage() {
       
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-secondary text-secondary-foreground py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <section className="bg-secondary text-secondary-foreground py-16 lg:py-20 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <Image
+              src="/images/services-marketing.jpg"
+              alt=""
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="font-serif text-4xl lg:text-5xl font-bold leading-tight text-balance">
                 Marketing Services for Independent Pubs

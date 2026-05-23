@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { regions } from "@/lib/locations-data"
@@ -20,8 +21,17 @@ export default function LocationsPage() {
       
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-secondary text-secondary-foreground py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <section className="bg-secondary text-secondary-foreground py-16 lg:py-20 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <Image
+              src="/images/uk-pub-map.jpg"
+              alt=""
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
             <div className="max-w-3xl">
               <div className="flex items-center gap-2 text-accent mb-4">
                 <MapPin className="h-5 w-5" />

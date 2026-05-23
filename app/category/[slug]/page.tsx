@@ -134,6 +134,7 @@ export default async function CategoryPage({ params }: Props) {
                     categorySlug={post.categorySlug}
                     date={post.date}
                     slug={post.slug}
+                    image={post.image}
                   />
                 ))}
               </div>

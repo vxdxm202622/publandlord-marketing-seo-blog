@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 interface BlogCardProps {
@@ -9,6 +10,7 @@ interface BlogCardProps {
   date: string
   slug: string
   featured?: boolean
+  image?: string
 }
 
 export function BlogCard({ 
@@ -18,11 +20,22 @@ export function BlogCard({
   categorySlug, 
   date, 
   slug,
-  featured = false 
+  featured = false,
+  image
 }: BlogCardProps) {
   return (
-    <Card className={`h-full flex flex-col bg-card hover:shadow-lg transition-shadow ${featured ? 'border-primary/30' : ''}`}>
-      <CardHeader className="pb-3">
+    <Card className={`h-full flex flex-col bg-card hover:shadow-lg transition-shadow overflow-hidden ${featured ? 'border-primary/30' : ''}`}>
+      {image && (
+        <Link href={`/blog/${slug}`} className="block relative aspect-[16/9] overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </Link>
+      )}
+      <CardHeader className={`pb-3 ${image ? 'pt-4' : ''}`}>
         <div className="flex items-center gap-3 text-sm">
           <Link 
             href={`/category/${categorySlug}`}

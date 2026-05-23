@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Image from "next/image"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { CTABanner } from "@/components/cta-banner"
@@ -19,8 +20,17 @@ export default function AboutPage() {
       
       <main className="flex-1">
         {/* Header */}
-        <section className="bg-secondary text-secondary-foreground">
-          <div className="mx-auto max-w-7xl px-4 py-12 lg:py-16 lg:px-8">
+        <section className="bg-secondary text-secondary-foreground relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <Image
+              src="/images/about-pub.jpg"
+              alt=""
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="relative mx-auto max-w-7xl px-4 py-12 lg:py-16 lg:px-8">
             <h1 className="font-serif text-3xl lg:text-4xl font-bold">
               About This Blog
             </h1>
